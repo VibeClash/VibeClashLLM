@@ -1,0 +1,34 @@
+
+---
+
+**src/types.ts**
+```ts
+export type Mode = 'PAPER' | 'LIVE';
+
+export type Network = 'solana' | 'bsc' | 'astar';
+
+export interface TokenInfo {
+  symbol: string;
+  address?: string; // EVM address or Solana mint
+  decimals: number;
+}
+
+export interface TradeParams {
+  base: TokenInfo;
+  quote: TokenInfo;
+  amount: number; // base amount
+  slippageBps: number;
+}
+
+export interface Quote {
+  inAmount: string;   // base in atomic
+  outAmount: string;  // quote in atomic
+  price: number;      // quote per base
+  route?: any;
+}
+
+export interface TradeResult {
+  txId?: string;
+  simulated: boolean;
+  filledPrice: number;
+}

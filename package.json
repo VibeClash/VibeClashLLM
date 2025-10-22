@@ -1,0 +1,35 @@
+{
+  "name": "VibeClash-trading-agent",
+  "version": "0.2.0",
+  "private": false,
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "VibeClash": "dist/cli.js"
+  },
+  "scripts": {
+    "dev": "tsx src/cli.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/cli.js",
+    "lint": "eslint . --ext .ts || true",
+    "format": "prettier --write .",
+    "test": "node --version && echo \"(placeholder tests)\""
+  },
+  "dependencies": {
+    "@solana/web3.js": "^1.95.3",
+    "bs58": "^5.0.0",
+    "commander": "^12.1.0",
+    "cross-fetch": "^4.0.0",
+    "dotenv": "^16.4.5",
+    "ethers": "^6.13.1",
+    "pino": "^9.4.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.4",
+    "eslint": "^9.12.0",
+    "prettier": "^3.3.3",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3"
+  }
+}
