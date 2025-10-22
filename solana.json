@@ -1,0 +1,4 @@
+{
+  "SOL": { "symbol": "SOL", "decimals": 9 },
+  "USDC": { "symbol": "USDC", "decimals": 6 }
+}
