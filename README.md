@@ -6,9 +6,6 @@ VibeClash is a modular trading agent designed for **real trading** (no paper mod
 ---
 
 
-<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/0f7ec98a-0fbd-4859-b020-0394a6ef3ff8" />
-
-
 
 
 ## TL;DR (LIVE)
@@ -17,9 +14,6 @@ VibeClash is a modular trading agent designed for **real trading** (no paper mod
 npm i
 cp .env.example .env
 # Fill RPCs + keys (burners). MODE must be LIVE.
-
-# Solana (SMA Momentum)
-npm run dev -- run --network solana --strategy momentum --base SOL --quote USDC --amount 0.1
 
 # BSC with LLM Strategy
 export LLM_ENABLED=true && export OPENAI_API_KEY=sk-...
@@ -43,11 +37,9 @@ npm run dev -- llm-test
 ## Supported Networks
 
 | Chain | Router/Aggregator | Swap Signing | Notes |
-|------:|-------------------|--------------|-------|
-| Solana | Jupiter → Raydium | Solana Keypair | Uses `/v6/quote` + `/v6/swap` |
+|------:|-------------------|--------------|-------||
 | BNB Chain (BSC) | UniV2 / Pancake | EVM Private Key | Includes ERC20 allowance auto‑approve |
-| Astar | UniV2 compatible | EVM Private Key | Router address configurable in `.env` |
-| Pump.fun | (Post‑migration) via Raydium | Solana Keypair | Watcher included (demo); trade like normal SPL |
+| Aster | UniV2 compatible | EVM Private Key | Router address configurable in `.env` |
 
 > **Always verify** router addresses and keep slippage tight for new pools.
 
